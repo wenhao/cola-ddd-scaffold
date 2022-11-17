@@ -1,0 +1,6 @@
+rootProject.name = 'cola-dddd-scaffold'
+include 'adapter'
+include 'application'
+include 'domain'
+include 'infrastructure'
+include 'main'
