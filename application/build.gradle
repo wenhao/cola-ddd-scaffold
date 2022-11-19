@@ -1,3 +1,16 @@
 plugins {
     id 'java-library-conventions'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+dependencies {
+    implementation project(':domain')
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+
+    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
 }

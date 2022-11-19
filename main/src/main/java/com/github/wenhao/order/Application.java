@@ -1,4 +1,4 @@
-package com.github.wenhao.order.ddd;
+package com.github.wenhao.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
