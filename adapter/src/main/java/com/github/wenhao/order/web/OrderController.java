@@ -5,6 +5,7 @@ import com.github.wenhao.order.model.Order;
 import com.github.wenhao.order.web.mapper.OrderMapper;
 import com.github.wenhao.order.web.request.OrderCreateRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,6 @@ public class OrderController {
     public ResponseEntity<Void> create(@RequestBody @Validated OrderCreateRequest request) {
         Order order = orderMapper.toOrder(request);
         orderAppService.create(order);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 }
