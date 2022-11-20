@@ -1,7 +1,5 @@
 # cola-dddd-scaffold
 
-
-
 ### 建模案例
 
 ![订单领域建模](./docs/订单模型关系图.png)
