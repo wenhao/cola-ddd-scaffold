@@ -2,11 +2,11 @@ package com.github.wenhao.order;
 
 import com.github.wenhao.order.ability.OrderCommentService;
 import com.github.wenhao.order.ability.OrderPlacedService;
-import com.github.wenhao.order.gateway.NotificationGateway;
-import com.github.wenhao.order.gateway.PaymentGateway;
+import com.github.wenhao.order.gateway.remote.NotificationGateway;
+import com.github.wenhao.order.gateway.remote.PaymentGateway;
 import com.github.wenhao.comment.model.Comment;
 import com.github.wenhao.order.model.Order;
-import com.github.wenhao.order.repository.OrderRepository;
+import com.github.wenhao.order.gateway.database.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

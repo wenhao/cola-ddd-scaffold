@@ -1,6 +1,6 @@
-package com.github.wenhao.order.gatewayimpl;
+package com.github.wenhao.order.gatewayimpl.remote;
 
-import com.github.wenhao.order.gateway.PaymentGateway;
+import com.github.wenhao.order.gateway.remote.PaymentGateway;
 import org.springframework.stereotype.Component;
 
 @Component

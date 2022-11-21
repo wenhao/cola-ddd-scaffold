@@ -1,4 +1,4 @@
-package com.github.wenhao.order.repository;
+package com.github.wenhao.order.gateway.database;
 
 import com.github.wenhao.order.model.Order;
 

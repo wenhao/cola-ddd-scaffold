@@ -1,4 +1,4 @@
-package com.github.wenhao.order.repository;
+package com.github.wenhao.order.gatewayimpl.database;
 
 import com.github.wenhao.comment.model.Comment;
 import com.github.wenhao.comment.repository.OrderCommentRepository;

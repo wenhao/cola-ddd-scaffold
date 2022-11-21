@@ -1,5 +1,6 @@
-package com.github.wenhao.order.repository;
+package com.github.wenhao.order.gatewayimpl.database;
 
+import com.github.wenhao.order.gateway.database.OrderRepository;
 import com.github.wenhao.order.model.Order;
 import com.github.wenhao.order.model.OrderItem;
 import org.apache.ibatis.annotations.Insert;
@@ -32,7 +33,7 @@ public interface OrderRepositoryImpl extends OrderRepository {
             @Result(
                     property = "orderItems",
                     column = "id",
-                    many = @Many(select = "com.github.wenhao.order.repository.OrderRepositoryImpl.findAllByOrderId")
+                    many = @Many(select = "com.github.wenhao.order.gatewayimpl.database.repository.OrderRepositoryImpl.findAllByOrderId")
             )
     })
     Optional<Order> findById(Long id);
