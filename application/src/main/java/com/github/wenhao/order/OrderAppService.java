@@ -1,12 +1,12 @@
 package com.github.wenhao.order;
 
+import com.github.wenhao.comment.model.Comment;
 import com.github.wenhao.order.ability.OrderCommentService;
 import com.github.wenhao.order.ability.OrderPlacedService;
-import com.github.wenhao.order.gateway.remote.NotificationGateway;
-import com.github.wenhao.order.gateway.remote.PaymentGateway;
-import com.github.wenhao.comment.model.Comment;
-import com.github.wenhao.order.model.Order;
 import com.github.wenhao.order.gateway.database.OrderRepository;
+import com.github.wenhao.order.model.Order;
+import com.github.wenhao.gateway.NotificationGateway;
+import com.github.wenhao.gateway.PaymentGateway;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -36,11 +36,11 @@ public class OrderAppService {
     }
 
     public void pay(Long id, String payType) {
-        orderRepository.findById(id).ifPresent(it->paymentGateway.pay(id, payType));
+        orderRepository.findById(id).ifPresent(it -> paymentGateway.pay(id, payType));
     }
 
-    public List<Comment> findAllCommentByOrderId(Long orderId){
-       return orderCommentService.findAllByOrderId(orderId);
+    public List<Comment> findAllCommentByOrderId(Long orderId) {
+        return orderCommentService.findAllByOrderId(orderId);
     }
 
     public void createComment(Comment comment) {
