@@ -1,4 +1,4 @@
-rootProject.name = 'cola-dddd-scaffold'
+rootProject.name = 'cola-ddd-scaffold'
 include 'adapter'
 include 'application'
 include 'domain'
