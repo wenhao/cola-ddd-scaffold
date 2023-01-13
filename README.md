@@ -1,4 +1,4 @@
-# cola-dddd-scaffold
+# cola-ddd-scaffold
 
 ### 建模案例
 
