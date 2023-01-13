@@ -1,7 +1,13 @@
 plugins {
     id 'java-library-conventions'
-    id 'org.springframework.boot' version '2.7.5'
+    id 'org.springframework.boot' version '3.0.1' apply false
     id 'io.spring.dependency-management' version '1.1.0'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom(org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES)
+    }
 }
 
 dependencies {
@@ -9,9 +15,9 @@ dependencies {
     implementation project(':domain')
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.mapstruct:mapstruct:1.5.3.Final'
+    implementation 'org.mapstruct:mapstruct:1.+'
 
-    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.+'
 
-    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+    testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.+'
 }

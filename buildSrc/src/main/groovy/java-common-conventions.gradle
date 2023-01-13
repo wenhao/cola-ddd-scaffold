@@ -12,12 +12,12 @@ group = 'com.github.wenhao'
 version = '1.0.0'
 
 dependencies {
-    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'com.google.guava:guava:31.+'
 
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    compileOnly 'org.projectlombok:lombok:1.+'
+    annotationProcessor 'org.projectlombok:lombok:1.+'
 
-    testImplementation 'junit:junit:4.13'
-    testImplementation 'org.assertj:assertj-core:3.11.1'
+    testImplementation 'junit:junit:4.+'
+    testImplementation 'org.assertj:assertj-core:3.+'
     testImplementation 'org.mockito:mockito-core:3.+'
 }
