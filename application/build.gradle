@@ -20,3 +20,17 @@ dependencies {
 
     testAnnotationProcessor 'org.mapstruct:mapstruct-processor:1.+'
 }
+
+jacocoTestReport {
+    classDirectories.setFrom((files(classDirectories.files.collect {
+        fileTree(dir: it, excludes: ['**/gateway/**'])
+    })))
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            excludes = ['**.gateway.*']
+        }
+    }
+}

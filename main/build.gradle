@@ -28,7 +28,7 @@ tasks.named('check') {
     dependsOn tasks.named('testCodeCoverageReport', JacocoReport)
 }
 
-testCodeCoverageReport {
+tasks.named('testCodeCoverageReport', JacocoReport) {
     getClassDirectories().setFrom(files(
             [project(':adapter'),
              project(':domain'),
