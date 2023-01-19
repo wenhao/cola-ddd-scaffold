@@ -12,7 +12,7 @@ jacoco {
     toolVersion = "0.8.8"
 }
 
-jacocoTestReport {
+tasks.named('jacocoTestReport') {
     dependsOn test
     reports {
         xml.enabled true
@@ -21,10 +21,24 @@ jacocoTestReport {
     }
 }
 
-jacocoTestCoverageVerification {
+tasks.named('jacocoTestCoverageVerification') {
     violationRules {
         rule {
+            element = 'CLASS'
             limit {
+                counter = 'LINE'
+                minimum = 0.8
+            }
+            limit {
+                counter = 'BRANCH'
+                minimum = 0.8
+            }
+            limit {
+                counter = 'METHOD'
+                minimum = 0.8
+            }
+            limit {
+                counter = 'CLASS'
                 minimum = 0.8
             }
         }
